@@ -1,0 +1,133 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  background-color: #e4e0e0;
+}
+
+#game-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  margin: 20px;
+}
+
+#game-title {
+  margin-top: 3rem;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(14, 30px);
+  grid-template-rows: repeat(14, 30px);
+  gap: 2px;
+  margin-bottom: 20px;
+  max-width: 100%;
+  margin: 5px;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+#controls {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.color-button {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.color-button:hover {
+  border: 2px solid black;
+}
+
+#status {
+  margin-top: 20px;
+}
+
+#reset {
+  background-color: white;
+  cursor: pointer;
+  font-size: large;
+  border: 1px solid black;
+  padding: 10px 15px;
+  border-radius: 0.5rem;
+}
+
+#reset:hover {
+  background-color: aliceblue;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 492px) {
+  .board {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cell{
+    width: 20px;
+    height: 20px;
+  }
+
+  #controls{
+    margin-top: 2rem;
+    width: 250px;
+  }
+
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 2px;
+  }
+}
+
+@media (min-width: 771px) {
+  /* Adjust layout for screens larger than 770px */
+
+  .board {
+    display: flex;
+    align-items: center;
+  }
+
+  #grid {
+    margin-right: 20px; /* Add spacing between grid and controls */
+  }
+
+  #controls {
+    display: flex; /* Display controls for wider screens */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 250px; /* Adjust maximum width for controls */
+  }
+
+  .color-button {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    font-size: 16px; /* Increase font size for buttons */
+  }
+
+  .color-button:hover {
+    border: 2px solid black;
+  }
+}
