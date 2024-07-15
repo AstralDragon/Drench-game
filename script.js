@@ -13,7 +13,7 @@ const colors = [
   "#FF33B5",
   "#33FFF5",
 ];
-const gridSize = 14;
+const gridSize = 15;
 let gridData = [];
 let movesCount = 0;
 let moveLimit = 30;
